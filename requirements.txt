@@ -1,27 +1,50 @@
 typer>=0.12.0
-pydantic>=2.6.0
+pydantic~=2.0
+pydantic-settings~=2.0
 python-dotenv>=1.0.0
-requests>=2.31.0
-pillow>=10.0.0
+requests
+pillow
 pandas>=2.2.0
 huggingface_hub>=0.24.0
-numpy>=1.26.0
+numpy>=1.25.0
 opencv-python>=4.9.0
 insightface
 controlnet-aux
 git+https://github.com/tencent-ailab/IP-Adapter.git
 
-# Image generation (SDXL via diffusers)
-# Tip: install `torch` first from the official PyTorch index-url if PyPI is unstable,
-# then `pip install -r requirements.txt` will reuse the installed torch.
+# ComfyUI
+comfyui-frontend-package==1.38.13
+comfyui-workflow-templates==0.8.31
+comfyui-embedded-docs==0.4.1
+comfyui_manager==4.1b1
 torch
+torchsde
+torchvision
+torchaudio
 diffusers>=0.30.0
-transformers>=4.43.0
+transformers>=4.50.3
 accelerate>=0.33.0
-safetensors>=0.4.0
+safetensors>=0.4.2
+tokenizers>=0.13.3
+sentencepiece
+einops
+aiohttp>=3.11.8
+yarl>=1.18.0
+scipy
+tqdm
+psutil
+alembic
+SQLAlchemy
+av>=14.2.0
+comfy-kitchen>=0.2.7
+comfy-aimdo>=0.1.7
 
 # YAML config
-pyyaml>=6.0.0
+pyyaml
+
+# Non-essential ComfyUI dependencies
+kornia>=0.7.1
+spandrel
 
 # TTS (optional)
 # `apps/tts_gen` uses the external `piper` CLI. Installing this package typically provides it.
