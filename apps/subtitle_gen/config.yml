@@ -1,0 +1,17 @@
+# subtitle_gen config (all fields required; no code defaults)
+input:
+  shot_json: "storyboards/episode_01_thanks_network/shotlist.json"
+
+timing:
+  # If a shot has no duration_seconds, use this fallback.
+  default_duration_seconds: 1.0
+  # Minimum on-screen time per cue (avoid 0-duration lines).
+  min_duration_seconds: 0.8
+
+text:
+  # Prefer dialogue; fallback to summary when dialogue missing.
+  include_summary_fallback: true
+
+output:
+  srt_path: "outputs/subtitles/episode_01_thanks_network.srt"
+

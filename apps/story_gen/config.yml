@@ -1,0 +1,20 @@
+# Storyboard generation app config (all fields are required; no code defaults)
+model:
+  type: "sdxl_diffusers"
+  path: "models/sdXL_v10VAEFix.safetensors"
+  device: "cuda" # "cuda" or "cpu"
+
+storyboard:
+  shot_json: "storyboards/episode_01_thanks_network/shotlist.json"
+  out_dir: "storyboards/episode_01_thanks_network/frames_app_story_gen"
+
+  # Rendering params (explicit)
+  width: 832
+  height: 1472
+  steps: 28
+  guidance: 5.5
+
+  # Optional consistency behavior (explicit)
+  reference_image: "" # empty string disables img2img for all shots
+  strength: 0.65
+

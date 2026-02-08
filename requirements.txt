@@ -1,0 +1,30 @@
+typer>=0.12.0
+pydantic>=2.6.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+pillow>=10.0.0
+pandas>=2.2.0
+huggingface_hub>=0.24.0
+numpy>=1.26.0
+opencv-python>=4.9.0
+insightface
+controlnet-aux
+git+https://github.com/tencent-ailab/IP-Adapter.git
+
+# Image generation (SDXL via diffusers)
+# Tip: install `torch` first from the official PyTorch index-url if PyPI is unstable,
+# then `pip install -r requirements.txt` will reuse the installed torch.
+torch
+diffusers>=0.30.0
+transformers>=4.43.0
+accelerate>=0.33.0
+safetensors>=0.4.0
+
+# YAML config
+pyyaml>=6.0.0
+
+# TTS (optional)
+# `apps/tts_gen` uses the external `piper` CLI. Installing this package typically provides it.
+piper-tts
+pathvalidate>=3.2.0
+

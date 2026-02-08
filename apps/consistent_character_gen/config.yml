@@ -1,0 +1,31 @@
+# consistent_character_gen config (ComfyUI InstantID workflow)
+server:
+  base_url: "http://127.0.0.1:8188"
+
+workflow:
+  workflow_json: "apps/consistent_character_gen/workflow_api.json"
+
+inputs:
+  subject_image: "outputs/assets/episode_01_thanks_network/identity_from_kenburns.png"
+  pose_image: "outputs/character_turnaround/demo_xiaoli/pose_openpose.png"
+  keypoints_image: "outputs/character_turnaround/demo_xiaoli/face_kps.png"
+
+prompt:
+  prompt: "a portrait photo of a young Chinese office worker, white shirt, gray blazer, clean haircut"
+  negative_prompt: "lowres, bad anatomy, bad hands, text, watermark, blurry, deformed"
+
+generation:
+  width: 1024
+  height: 1024
+  seed: 760055130669872
+  steps: 4
+  cfg: 1.3
+  denoise: 0.95
+
+weights:
+  instantid_weight: 0.8
+  controlnet_strength: 0.9
+  ipadapter_weight: 1.0
+
+output:
+  out_dir: "outputs/consistent_character/demo_xiaoli"

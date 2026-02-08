@@ -1,0 +1,13 @@
+# edl_gen config (all fields required; no code defaults)
+input:
+  shot_json: "storyboards/episode_01_thanks_network/shotlist.json"
+  frames_dir: "storyboards/episode_01_thanks_network/frames_app_story_gen"
+  frame_ext: ".png"
+
+timing:
+  # If a shot has no duration_seconds, use this fallback.
+  default_duration_seconds: 1.0
+
+output:
+  edl_json: "outputs/edl/episode_01_thanks_network.edl.json"
+

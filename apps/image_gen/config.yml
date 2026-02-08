@@ -1,0 +1,21 @@
+# Image generation app config (all fields are required; no code defaults)
+model:
+  type: "sdxl_diffusers"
+  path: "models/sdXL_v10VAEFix.safetensors"
+  device: "cuda" # "cuda" or "cpu"
+
+generation:
+  prompt: "realistic cinematic photo, an Asian male office worker, modern office cubicle, shallow depth of field"
+  negative_prompt: "cartoon, anime, low resolution, blurry, watermark, logo, unreadable text"
+  out_path: "outputs/image_gen/one.png"
+
+  width: 832
+  height: 1472
+  steps: 28
+  guidance: 5.5
+  seed: 12345
+
+  # img2img (optional behavior controlled explicitly)
+  reference_image: "" # empty string disables img2img; otherwise a file path
+  strength: 0.65
+

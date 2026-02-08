@@ -1,0 +1,23 @@
+# motion_kenburns config (all fields required; no code defaults)
+input:
+  frames_dir: "storyboards/episode_01_thanks_network/frames_app_story_gen"
+  pattern: "%02d.png"
+  start_number: 1
+
+motion:
+  seconds_per_image: 1.0
+  fps: 24
+  width: 832
+  height: 1472
+  zoom_per_frame: 0.0015
+  max_zoom: 1.06
+
+output:
+  out_path: "outputs/motion/episode_01_thanks_network_kenburns.mp4"
+
+encoding:
+  codec: "libx264"
+  pix_fmt: "yuv420p"
+  crf: 18
+  preset: "medium"
+

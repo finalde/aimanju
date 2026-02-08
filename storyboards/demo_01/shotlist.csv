@@ -1,0 +1,4 @@
+shot_id,duration_seconds,summary,framing,camera,action,dialogue,seed
+01,2.0,钩子,"close-up, slight high angle",,办公室近景，小李盯着电脑屏幕，眼神瞬间凝固，环境安静。,小李（低声）：完了……,1001
+02,2.0,误触,extreme close-up,,手机特写，聊天界面模糊但能看出“群聊”氛围；手指停在“发送”位置，颤了一下。,小李：我……我发错群了！,1002
+03,2.0,余波,medium shot with foreground occlusion,,中景，小李抬头，旁边同事身影虚化，气氛尴尬；他强装镇定，试图收起手机。,小李（挤出笑）：没事……应该没人看到吧？,1003

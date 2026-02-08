@@ -1,0 +1,34 @@
+# video_mux config (all fields required; no code defaults)
+inputs:
+  video_mp4: "outputs/motion/episode_01_thanks_network_kenburns.mp4"
+  # From apps.tts_gen output
+  tts_manifest_json: "outputs/tts/episode_01_thanks_network_zh/manifest.json"
+  # Optional subtitles
+  subtitles_srt: "outputs/subtitles/episode_01_thanks_network.srt"
+
+subtitles:
+  # default: burn subtitles into video (most compatible)
+  mode: "burn_in" # "burn_in" | "soft" | "none"
+  # For burn-in only. Requires a Chinese-capable font installed in WSL (e.g. Noto CJK).
+  # If you see tofu squares, install fonts: `sudo apt-get install -y fonts-noto-cjk`
+  # Suggested readable style for 832x1472-ish portrait:
+  # - Smaller font
+  # - Bottom centered (Alignment=2)
+  # - Reasonable bottom margin
+  force_style: "FontName=Noto Sans CJK SC,Fontsize=30,Outline=2,Shadow=1,Alignment=2,MarginV=70"
+
+output:
+  out_dir: "outputs/video_mux/episode_01_thanks_network"
+  # Final result (mp4)
+  out_mp4: "outputs/video_mux/episode_01_thanks_network/final.mp4"
+  # Intermediate voice track built from tts manifest (mp3)
+  voice_mp3: "outputs/video_mux/episode_01_thanks_network/voice.mp3"
+
+encoding:
+  # Used only when subtitles.mode == burn_in (needs re-encode video)
+  vcodec: "libx264"
+  crf: 18
+  preset: "medium"
+  acodec: "aac"
+  abitrate: "192k"
+

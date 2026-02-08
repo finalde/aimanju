@@ -1,0 +1,60 @@
+# assets_gen config (all fields required; no code defaults)
+base:
+  # Use a local SDXL checkpoint to avoid large base-model downloads.
+  # You can switch back to "stabilityai/stable-diffusion-xl-base-1.0" later.
+  sdxl_base: "models/sdXL_v10VAEFix.safetensors"
+  device: "cuda"
+
+generation:
+  width: 832
+  height: 1472
+  steps: 28
+  guidance: 5.5
+  negative_prompt: "low quality, blurry, watermark, logo, unreadable text, subtitles, caption, text, typography"
+  img2img_strength: 0.35
+
+face_crop:
+  enabled: true
+  output_size: 512
+  min_face_size: 120
+  scale: 1.6
+
+ip_adapter:
+  # NOTE: the "plus-face vit-h" IP-Adapter weight you downloaded is not compatible with the provided image_encoder
+  # (shape mismatch). We'll use img2img for consistency first.
+  enabled: false
+  path: "models/ip_adapter_sdxl"
+  weight_name: "ip-adapter-plus-face_sdxl_vit-h.safetensors"
+  scale: 0.75
+  reference_image: "outputs/assets/episode_01_thanks_network/identity_from_kenburns.png"
+
+characters:
+  - mode: "img2img"
+    id: "xiaoli"
+    name: "小李"
+    description: "young Chinese office worker, clean haircut, white shirt, gray blazer"
+    controlnet: null
+    views:
+      - id: "front"
+        seed: 1001
+        strength: 0.30
+        prompt_suffix: ""
+        control_image: ""
+        reference_image: "outputs/assets/episode_01_thanks_network/identity_from_kenburns.png"
+      - id: "side"
+        seed: 1002
+        strength: 0.40
+        prompt_suffix: ""
+        control_image: ""
+        reference_image: "generated:front_face"
+      - id: "back"
+        seed: 1003
+        strength: 0.55
+        prompt_suffix: ""
+        control_image: ""
+        reference_image: "generated:front_face"
+backgrounds: []
+
+output:
+  out_dir: "outputs/assets/episode_01_thanks_network"
+

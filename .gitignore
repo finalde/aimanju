@@ -201,6 +201,13 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
+# Local AI workflow artifacts
+.venv/
+models/
+outputs/
+storyboards/**/frames/
+storyboards/**/frames_*/
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

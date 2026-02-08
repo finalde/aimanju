@@ -1,0 +1,19 @@
+# story_gen demo_01 config (all fields required; no code defaults)
+model:
+  type: "sdxl_diffusers"
+  path: "models/sdXL_v10VAEFix.safetensors"
+  device: "cuda" # "cuda" or "cpu"
+
+storyboard:
+  shot_json: "storyboards/demo_01/shotlist.json"
+  out_dir: "storyboards/demo_01/frames"
+
+  width: 832
+  height: 1472
+  steps: 20
+  guidance: 5.5
+
+  # Optional consistency: set to a character reference image to enable img2img
+  reference_image: "" # e.g. "outputs/assets/episode_01_thanks_network/characters/xiaoli/front.png"
+  strength: 0.55
+

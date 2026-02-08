@@ -1,0 +1,17 @@
+# video_edit config (all fields required; no code defaults)
+input:
+  frames_dir: "storyboards/episode_01_thanks_network/frames_app_story_gen"
+  # frames file naming: 01.png, 02.png ... (printf style)
+  pattern: "%02d.png"
+  start_number: 1
+
+output:
+  out_path: "outputs/video_edit/rough.mp4"
+  fps: 6
+
+encoding:
+  codec: "libx264"
+  pix_fmt: "yuv420p"
+  crf: 18
+  preset: "medium"
+

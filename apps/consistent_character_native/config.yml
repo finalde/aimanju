@@ -1,0 +1,39 @@
+# consistent_character_native config (FaceID -> ControlNet pose)
+model:
+  base_model: "models/sdXL_v10VAEFix.safetensors"
+  device: "cuda"
+
+faceid:
+  ip_adapter_faceid_sdxl: "models/ip_adapter_faceid/ip-adapter-faceid_sdxl.bin"
+  insightface_model: "buffalo_l"
+  insightface_home: "models/insightface"
+  provider: "CUDAExecutionProvider"
+
+inputs:
+  subject_image: "outputs/assets/episode_01_thanks_network/identity_from_kenburns.png"
+
+prompt:
+  prompt: "full body character reference, young Chinese office worker, white shirt, gray blazer, clean haircut, studio lighting, plain background"
+  negative_prompt: "text, watermark, lowres, blurry, deformed, extra limbs, extra fingers"
+
+identity:
+  width: 832
+  height: 1472
+  steps: 28
+  guidance: 5.5
+  seed: 202401
+
+pose:
+  controlnet_path: "models/controlnet_sdxl/openpose"
+  control_image: "outputs/consistent_character/native/pose_openpose.png"
+  auto_generate: true
+  auto_from: "identity_image"
+  conditioning_scale: 0.85
+  strength: 0.55
+  steps: 28
+  guidance: 5.5
+  seed: 202402
+
+output:
+  identity_png: "outputs/consistent_character/native/identity.png"
+  posed_png: "outputs/consistent_character/native/posed.png"

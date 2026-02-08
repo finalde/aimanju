@@ -1,0 +1,44 @@
+{
+  "episode": "demo_01",
+  "style": "realistic cinematic",
+  "global_prompt": "realistic cinematic, real photography look, 35mm lens look, shallow depth of field, afternoon natural window light, cool gray color grade, soft but contrasty lighting, subtle film grain, high detail, vertical 9:16 composition",
+  "global_negative_prompt": "cartoon, anime, low resolution, blurry, ugly, deformed hands, extra fingers, extra limbs, multiple faces, unreadable text, watermark, logo",
+  "shots": [
+    {
+      "shot_id": "01",
+      "duration_seconds": 2.0,
+      "summary": "钩子",
+      "framing": "close-up, slight high angle",
+      "camera": null,
+      "action": "办公室近景，小李盯着电脑屏幕，眼神瞬间凝固，环境安静。",
+      "dialogue": "小李（低声）：完了……",
+      "prompt": "Asian male office worker, 25yo, short black hair, clean-shaven, white shirt, dark jacket, ID badge, modern open-plan office cubicle, desk with monitor and keyboard, glass partitions, blurred coworkers, close-up: he freezes, shocked, staring at computer screen glow, cinematic lighting, shallow depth of field, no readable text on screens, no subtitles",
+      "negative_prompt": "cartoon, anime, low resolution, blurry, ugly, deformed hands, extra fingers, extra limbs, multiple faces, unreadable text, watermark, logo",
+      "seed": 1001
+    },
+    {
+      "shot_id": "02",
+      "duration_seconds": 2.0,
+      "summary": "误触",
+      "framing": "extreme close-up",
+      "camera": null,
+      "action": "手机特写，聊天界面模糊但能看出“群聊”氛围；手指停在“发送”位置，颤了一下。",
+      "dialogue": "小李：我……我发错群了！",
+      "prompt": "Asian male office worker, 25yo, short black hair, clean-shaven, white shirt, dark jacket, ID badge, modern open-plan office cubicle, desk with monitor and keyboard, glass partitions, blurred coworkers, extreme close-up: hand holding smartphone, chat UI blurred, trembling fingers, cinematic lighting, shallow depth of field, no readable text on screens, no subtitles",
+      "negative_prompt": "cartoon, anime, low resolution, blurry, ugly, deformed hands, extra fingers, extra limbs, multiple faces, unreadable text, watermark, logo",
+      "seed": 1002
+    },
+    {
+      "shot_id": "03",
+      "duration_seconds": 2.0,
+      "summary": "余波",
+      "framing": "medium shot with foreground occlusion",
+      "camera": null,
+      "action": "中景，小李抬头，旁边同事身影虚化，气氛尴尬；他强装镇定，试图收起手机。",
+      "dialogue": "小李（挤出笑）：没事……应该没人看到吧？",
+      "prompt": "Asian male office worker, 25yo, short black hair, clean-shaven, white shirt, dark jacket, ID badge, modern open-plan office cubicle, desk with monitor and keyboard, glass partitions, blurred coworkers, medium shot: he looks up pale, sweaty; coworkers as blurred foreground silhouettes, cinematic lighting, shallow depth of field, no readable text on screens, no subtitles",
+      "negative_prompt": "cartoon, anime, low resolution, blurry, ugly, deformed hands, extra fingers, extra limbs, multiple faces, unreadable text, watermark, logo",
+      "seed": 1003
+    }
+  ]
+}

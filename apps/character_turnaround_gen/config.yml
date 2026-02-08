@@ -1,0 +1,88 @@
+# character_turnaround_gen config (all fields required; no code defaults)
+# Choose generation strategy:
+# - turnaround_sheet: one image contains 4 views; then split into 4
+# - img2img_views: generate a base identity image, then img2img 4 views from it (more reliable for "back")
+strategy:
+  type: "img2img_views"
+
+model:
+  type: "sdxl_diffusers"
+  path: "models/sdXL_v10VAEFix.safetensors"
+  device: "cuda" # "cuda" or "cpu"
+
+prompt:
+  # Put your character description here:
+  character_description: "young Chinese office worker, clean haircut, clean-shaven, white shirt, gray blazer"
+  # Global style guidance:
+  style: "photorealistic studio photo"
+  negative_prompt: "text, subtitles, caption, watermark, logo, multiple people, duplicate, crowd, portrait, close-up, cropped, out of frame, low quality, blurry, deformed, extra limbs, extra fingers"
+
+controlnet:
+  enabled: true
+  # SDXL ControlNet (canny) model path
+  path: "models/controlnet-canny-sdxl-1.0"
+  conditioning_scale: 0.6
+  low_threshold: 100
+  high_threshold: 200
+
+output:
+  out_dir: "outputs/character_turnaround/demo_xiaoli"
+  # The generated 2x2 sheet:
+  sheet_png: "outputs/character_turnaround/demo_xiaoli/turnaround_sheet.png"
+  # Cropped 4 views:
+  front_png: "outputs/character_turnaround/demo_xiaoli/front.png"
+  left_png: "outputs/character_turnaround/demo_xiaoli/left.png"
+  back_png: "outputs/character_turnaround/demo_xiaoli/back.png"
+  right_png: "outputs/character_turnaround/demo_xiaoli/right.png"
+  view_width: 832
+  view_height: 1472
+
+generation:
+  # Portrait ratio reduces "two people" compositions.
+  width: 832
+  height: 1472
+  steps: 28
+  guidance: 5.5
+  seed: 12345
+
+# Used only when strategy.type = "img2img_views"
+img2img:
+  base_png: "outputs/character_turnaround/demo_xiaoli/base_identity.png"
+  base_seed: 10001
+  strength_default: 0.65
+
+# Used only when strategy.type = "img2img_views"
+views:
+  - id: "front"
+    seed: 12011
+    strength: 0.55
+    prompt_suffix: "front view"
+    pose_image: "outputs/character_turnaround/demo_xiaoli/base_identity.png"
+  - id: "left"
+    seed: 12012
+    strength: 0.65
+    prompt_suffix: "left profile view"
+    pose_image: "outputs/character_turnaround/demo_xiaoli/base_identity.png"
+  - id: "back"
+    seed: 12013
+    strength: 0.75
+    prompt_suffix: "BACK view only, facing away from camera, show back of head and back of suit"
+    pose_image: "outputs/character_turnaround/demo_xiaoli/base_identity.png"
+  - id: "right"
+    seed: 12014
+    strength: 0.65
+    prompt_suffix: "right profile view"
+    pose_image: "outputs/character_turnaround/demo_xiaoli/base_identity.png"
+
+layout:
+  # We generate a single 1x4 sheet and split it:
+  rows: 1
+  cols: 4
+  # Mapping of grid cells to outputs (row-major):
+  # 0 = left-most, 1 = mid-left, 2 = mid-right, 3 = right-most
+  order:
+    front: 0
+    left: 1
+    back: 2
+    right: 3
+

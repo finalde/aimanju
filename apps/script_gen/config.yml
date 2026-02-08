@@ -1,0 +1,17 @@
+# script_gen config (all fields required; no code defaults)
+script:
+  # Each non-empty line becomes one cue.
+  lines: |-
+    小李（低声，瞬间破音）：完了……我发错群了！
+    小李（语速快）：那张图……是我吐槽老板的……
+    小李（吞口水）：他们……都看到了吧？
+    老板（平静）：小李，你过来一下。
+    老板（淡淡的）：你这网不太行。
+    小李（小声，劫后余生）：……谢谢网。
+    小李（崩溃）：等等——不要啊！
+
+output:
+  out_dir: "outputs/scripts/episode_01_thanks_network"
+  manifest_json: "outputs/scripts/episode_01_thanks_network/manifest.json"
+  write_text_files: true
+
