@@ -22,7 +22,7 @@ torchsde
 torchvision
 torchaudio
 diffusers>=0.30.0
-transformers>=4.50.3
+transformers>=4.51.3,<5
 accelerate>=0.33.0
 safetensors>=0.4.2
 tokenizers>=0.13.3
@@ -50,4 +50,8 @@ spandrel
 # `apps/tts_gen` uses the external `piper` CLI. Installing this package typically provides it.
 piper-tts
 pathvalidate>=3.2.0
+loguru
+py3langid
+torch-complex
+spacy
 
