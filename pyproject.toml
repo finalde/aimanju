@@ -1,0 +1,10 @@
+[project]
+name = "aimanju"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+
+# uv: provide torch when building flash-attn (it doesn't declare it as a build dep)
+[tool.uv.extra-build-dependencies]
+flash-attn = ["torch"]

@@ -13029,6 +13029,17 @@
             "title": "ComfyUI-Games"
         },
         {
+            "author": "GraftingRayman",
+            "description": "A ComfyUI custom node for baking LoRAs into base models and extracting LoRAs from merged/finetuned models. This node provides advanced functionality for managing LoRA weights with support for format conversion between sd-scripts and ComfyUI formats.",
+            "files": [
+                "https://github.com/GraftingRayman/ComfyUI-ZImage-Bake-Extract"
+            ],
+            "id": "ComfyUI-ZImage-Bake-Extract",
+            "install_type": "git-clone",
+            "reference": "https://github.com/GraftingRayman/ComfyUI-ZImage-Bake-Extract",
+            "title": "ComfyUI-ZImage-Bake-Extract"
+        },
+        {
             "author": "royceschultz",
             "description": "Send notifications when a workflow completes.",
             "files": [
@@ -17580,6 +17591,17 @@
             "install_type": "git-clone",
             "reference": "https://github.com/ihmily/comfy-deploy",
             "title": "comfy-deploy"
+        },
+        {
+            "author": "Hmily",
+            "description": "ComfyUI implementation of 'FitDiTx: Advancing the Authentic Garment Details for High-fidelity Virtual Try-on'",
+            "files": [
+                "https://github.com/ihmily/ComfyUI-FitDiTx"
+            ],
+            "id": "ComfyUI-FitDiTx",
+            "install_type": "git-clone",
+            "reference": "https://github.com/ihmily/ComfyUI-FitDiTx",
+            "title": "ComfyUI-FitDiTx"
         },
         {
             "author": "k-komarov",
@@ -31836,12 +31858,12 @@
         },
         {
             "author": "vaishnav-vn",
-            "description": "repo has Custon node designed to expand, pad, and mask images to fixed or randomized aspect ratios with precise spatial and scale control \u2014 engineered for outpainting, compositional layout, and creative canvas expansion. ",
+            "description": "ComfyUI custom nodes: (1) Pad Image by Aspect for Outpaint \u2014 expand, pad, and mask images to fixed or randomized aspect ratios with precise spatial and scale control for outpainting and canvas expansion. (2) Image Mask Comparer \u2014 compare masked regions of two images with similarity scoring and automatic retry/re-queue on mismatch.",
             "files": [
                 "https://github.com/vaishnav-vn/va1"
             ],
             "install_type": "git-clone",
-            "name": "Pad Image by Aspect",
+            "name": "va1",
             "reference": "https://github.com/vaishnav-vn/va1",
             "title": "va1"
         },
@@ -38590,16 +38612,6 @@
             "title": "ATI_AudioReactive"
         },
         {
-            "author": "techzuhaib",
-            "description": "FaceCLIP nodes for ComfyUI providing joint embeddings from aligned face images plus text prompts, and identity-preserving image synthesis using fine-tuned SDXL UNet. (Description by CC)",
-            "files": [
-                "https://github.com/techzuhaib/FaceCLIP-ComfyUI"
-            ],
-            "install_type": "git-clone",
-            "reference": "https://github.com/techzuhaib/FaceCLIP-ComfyUI",
-            "title": "FaceCLIP-ComfyUI"
-        },
-        {
             "author": "tuki0918",
             "description": "Custom nodes for ComfyUI to expand images with noise for outpainting or inpainting purposes. This allows for seamless image extension in any direction.",
             "files": [
@@ -41859,6 +41871,17 @@
             "title": "ComfyUI-Majoor-ImageOps"
         },
         {
+            "author": "MajoorWaldi",
+            "description": "Majoor Assets Manager is an advanced asset browser for ComfyUI with search, metadata extraction, rating/tags, workflow metadata parsing, and integrated image/video/audio asset management.",
+            "files": [
+                "https://github.com/MajoorWaldi/ComfyUI-Majoor-AssetsManager"
+            ],
+            "id": "majoor-assetsmanager",
+            "install_type": "git-clone",
+            "reference": "https://github.com/MajoorWaldi/ComfyUI-Majoor-AssetsManager",
+            "title": "ComfyUI-Majoor-AssetsManager"
+        },
+        {
             "author": "sinanzoo2nd",
             "description": "Advanced wildcard control with seed-based selection, LoRA stack support, and utilities.",
             "files": [
@@ -42004,11 +42027,11 @@
             "author": "DemonAlone",
             "description": "A collection of nodes that provide dynamic dropdown selectors for Samplers, Schedulers, Checkpoints, and Diffusion Models, outputting a comma-separated string for use in XY plots.",
             "files": [
-                "https://github.com/DemonAlone/SimpeStringGenerator_ComfyUI"
+                "https://github.com/DemonAlone/DemonAlone-nodes-ComfyUI"
             ],
             "install_type": "git-clone",
-            "reference": "https://github.com/DemonAlone/SimpeStringGenerator_ComfyUI",
-            "title": "SimpeStringGenerator_ComfyUI"
+            "reference": "https://github.com/DemonAlone/DemonAlone-nodes-ComfyUI",
+            "title": "DemonAlone-nodes-ComfyUI"
         },
         {
             "author": "tabisheva",
@@ -42566,16 +42589,6 @@
             "install_type": "git-clone",
             "reference": "https://github.com/kakachiex2/comfyui-ltx2-efficient",
             "title": "comfyui-ltx2-efficient"
-        },
-        {
-            "author": "SlothHole",
-            "description": "Build a ComfyUI \"self-improving\" workflow where each render is evaluated by a local vision LLM, which then edits the prompt/parameters and triggers another run.",
-            "files": [
-                "https://github.com/SlothHole/Imitatoes"
-            ],
-            "install_type": "git-clone",
-            "reference": "https://github.com/SlothHole/Imitatoes",
-            "title": "Imitatoes"
         },
         {
             "author": "BobJohnson24",
@@ -43190,6 +43203,137 @@
             "install_type": "git-clone",
             "reference": "https://github.com/HappyOnigiri/ComfyUI-Meld",
             "title": "ComfyUI-Meld"
+        },
+        {
+            "author": "maartenharms",
+            "description": "Intelligent path organization for ComfyUI. Drag-drop segments, auto-detection (Model, LoRA, Resolution, Seed), template variables, global presets, dual outputs for Image Saver, and 7 beautiful themes. Say goodbye to messy output folders!",
+            "files": [
+                "https://github.com/maartenharms/comfyui-flowpath"
+            ],
+            "id": "flowpath",
+            "install_type": "git-clone",
+            "reference": "https://github.com/maartenharms/comfyui-flowpath",
+            "title": "FlowPath"
+        },
+        {
+            "author": "maartenharms",
+            "description": "Modular prompt engineering with wildcards, variations preview, auto-sort, and presets. Two modes (Simple/Extended), LoRA Manager integration, and 7 themes shared with FlowPath.",
+            "files": [
+                "https://github.com/maartenharms/comfyui-promptflow"
+            ],
+            "id": "promptflow",
+            "install_type": "git-clone",
+            "reference": "https://github.com/maartenharms/comfyui-promptflow",
+            "title": "PromptFlow"
+        },
+        {
+            "author": "Moser9815",
+            "description": "Automation nodes for ComfyUI: RM Styles (load prompts from JSON with random/increment modes), Power LoRA Loader (advanced LoRA loading with random weights), image fallback, mask gate, latent operations, and video combine nodes.",
+            "files": [
+                "https://github.com/Moser9815/ComfyUI-RMAutomation"
+            ],
+            "id": "rmautomation",
+            "install_type": "git-clone",
+            "reference": "https://github.com/Moser9815/ComfyUI-RMAutomation",
+            "title": "ComfyUI-RMAutomation"
+        },
+        {
+            "author": "dennisvink",
+            "description": "This node adds an outside-only outline around the opaque region of an image while cleaning up semi\u2011transparent edge pixels and removing stray islands.",
+            "files": [
+                "https://github.com/dennisvink/comfyui-outline"
+            ],
+            "id": "outlinealphasnap",
+            "install_type": "git-clone",
+            "reference": "https://github.com/dennisvink/comfyui-outline",
+            "title": "Outline Alpha Snap Node for ComfyUI"
+        },
+        {
+            "author": "NineKey1028",
+            "description": "Automation toolkit for ComfyUI featuring dynamic tag combinations, LoRA parsing, and workflow metadata reading.",
+            "files": [
+                "https://github.com/NineKey1028/ComfyUI_Dynamic_TagLoader"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/NineKey1028/ComfyUI_Dynamic_TagLoader",
+            "title": "ComfyUI_Dynamic_TagLoader"
+        },
+        {
+            "author": "SWORKS_TEAM",
+            "description": "Sidebar browser for SWORKS_TEAM LoRAs from Civitai. Browse, download, and apply LoRAs with image previews and tag filtering.",
+            "files": [
+                "https://github.com/sworksteam/SEngine"
+            ],
+            "id": "sengine",
+            "install_type": "git-clone",
+            "reference": "https://github.com/sworksteam/SEngine",
+            "title": "SEngine"
+        },
+        {
+            "author": "huchukato",
+            "category": "image",
+            "description": "Enhanced QwenVL node with Smart Prompt Caching, multilingual WAN 2.2 presets, comprehensive visual style detection, and NSFW support. Latest v2.0.8 with bug fixes and stability improvements for professional multimodal workflows.",
+            "files": [
+                "https://github.com/huchukato/ComfyUI-QwenVL-Mod"
+            ],
+            "id": "qwenvl-mod",
+            "install_type": "git-clone",
+            "reference": "https://github.com/huchukato/ComfyUI-QwenVL-Mod",
+            "tags": [
+                "vision",
+                "language",
+                "multimodal",
+                "qwen",
+                "smart_caching",
+                "prompt_caching",
+                "multilingual",
+                "style_detection",
+                "performance",
+                "wan2.2",
+                "video",
+                "i2v",
+                "t2v",
+                "cinematography",
+                "abliterated",
+                "nsfw",
+                "enhanced",
+                "fork",
+                "stable"
+            ],
+            "title": "QwenVL-Mod: Enhanced Vision-Language",
+            "version": "2.0.8"
+        },
+        {
+            "author": "kadima-tech",
+            "description": "Load and use your Draggen.io moodboards directly in ComfyUI.",
+            "files": [
+                "https://github.com/kadima-tech/comfyui-draggen"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/kadima-tech/comfyui-draggen",
+            "title": "ComfyUI-Draggen"
+        },
+        {
+            "author": "Night1099",
+            "description": "PBR texture generation diffusion model nodes. Generate depth maps and normal maps from baked textures using PBRFusion4.",
+            "files": [
+                "https://github.com/Night1099/COMFYUI-PBRFusion4"
+            ],
+            "id": "comfyui-pbrfusion4",
+            "install_type": "git-clone",
+            "reference": "https://github.com/Night1099/COMFYUI-PBRFusion4",
+            "title": "ComfyUI-PBRFusion4"
+        },
+        {
+            "author": "TK3R",
+            "description": "A few enhanced versions of vanilla nodes, mainly Qwen/ZImage controlnet nodes & scheduled CFG guider, and some utility nodes.",
+            "files": [
+                "https://github.com/TK3R/ComfyUI_TK3R_Ext"
+            ],
+            "id": "comfyui_tk3r_ext",
+            "install_type": "git-clone",
+            "reference": "https://github.com/TK3R/ComfyUI_TK3R_Ext",
+            "title": "ComfyUI TK3R Extensions"
         },
         {
             "author": "Ser-Hilary",

@@ -28,6 +28,10 @@ safetensors>=0.4.2
 tokenizers>=0.13.3
 sentencepiece
 einops
+datasets
+timm
+# flash_attn: if pip install fails (ModuleNotFoundError: torch), run: pip install flash_attn --no-build-isolation
+flash_attn
 aiohttp>=3.11.8
 yarl>=1.18.0
 scipy
