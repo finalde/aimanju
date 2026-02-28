@@ -30,8 +30,9 @@ sentencepiece
 einops
 datasets
 timm
-# flash_attn: if pip install fails (ModuleNotFoundError: torch), run: pip install flash_attn --no-build-isolation
-flash_attn
+# flash_attn: optional; install separately if needed. Build often fails; use a prebuilt wheel or skip.
+# uv pip install 'flash_attn @ https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl'
+# flash_attn
 aiohttp>=3.11.8
 yarl>=1.18.0
 scipy
@@ -45,6 +46,44 @@ comfy-aimdo>=0.1.7
 
 # YAML config
 pyyaml
+
+# comfyui_controlnet_aux (Depth Anything, etc.)
+-r external/ComfyUI/custom_nodes/comfyui_controlnet_aux/requirements.txt
+
+# Custom nodes optional deps (fix "Cannot import ... module: No module named '...'")
+ultralytics
+sox
+PyWavelets
+openai
+piexif
+numba
+librosa
+imageio-ffmpeg
+pydub
+pypinyin
+hangul-romanize
+num2words
+typeguard
+ollama
+# prompt-all-in-one-mw Gemini: provides "from google import genai"
+google-genai
+# comfyui-rmbg, comfyui-impact-pack (SAM2): hydra config
+hydra-core
+# comfyui-rmbg: video decode
+decord
+# comfyui-rmbg AILab_SAM3Segment
+pycocotools
+# audiotools (look2hear)
+pytorch-lightning
+# prompt-all-in-one-mw audio_to_prompt
+qwen-omni-utils
+# audiotools
+git+https://github.com/SesameAILabs/silentcipher.git
+# comfyui-impact-pack (Segment Anything / SAM)
+git+https://github.com/facebookresearch/segment-anything.git
+# comfyui-rmbg AILab_SegmentV2 (Grounding DINO): install after other deps with:
+#   uv pip install "git+https://github.com/IDEA-Research/GroundingDINO.git" --no-build-isolation
+# git+https://github.com/IDEA-Research/GroundingDINO.git
 
 # Non-essential ComfyUI dependencies
 kornia>=0.7.1
