@@ -22217,16 +22217,6 @@
             "title": "ComfyUI-PersianText"
         },
         {
-            "author": "andygill",
-            "description": "ComfyUI nodes for 3D visualization.",
-            "files": [
-                "https://github.com/andygill/comfyui-sunflower-nodes"
-            ],
-            "install_type": "git-clone",
-            "reference": "https://github.com/andygill/comfyui-sunflower-nodes",
-            "title": "comfyui-sunflower-nodes"
-        },
-        {
             "author": "HM-RunningHub",
             "description": "This is a ComfyUI plugin that makes it easier to call and run workflows from RunningHub in your local ComfyUI setup.",
             "files": [
@@ -24244,6 +24234,16 @@
             "install_type": "git-clone",
             "reference": "https://github.com/GHOSTLXH/ComfyUI-Counternodes",
             "title": "ComfyUI-Counternodes"
+        },
+        {
+            "author": "GHOSTLXH",
+            "description": "These are two ComfyUI nodes used for converting input prompts into the Danbooru tag format (tag_a, tag_b, ...) and outputting the converted prompts.",
+            "files": [
+                "https://github.com/GHOSTLXH/ComfyUI_Danbooru_Formatter"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/GHOSTLXH/ComfyUI_Danbooru_Formatter",
+            "title": "ComfyUI_Danbooru_Formatter"
         },
         {
             "author": "agilly1989",
@@ -42287,26 +42287,6 @@
             "title": "ComfyUI-SPoletNodes"
         },
         {
-            "author": "xela-io",
-            "description": "Regional Prompting for ComfyUI - assign different prompts to different image areas.",
-            "files": [
-                "https://github.com/xela-io/ComfyUI-RegionalPrompting"
-            ],
-            "install_type": "git-clone",
-            "reference": "https://github.com/xela-io/ComfyUI-RegionalPrompting",
-            "title": "ComfyUI-RegionalPrompting"
-        },
-        {
-            "author": "xela-io",
-            "description": "Comprehensive custom node pack for detecting hair regions, creating precise masks, and enhancing hair details in images with 6 specialized nodes for various hair processing workflows. (Description by CC)",
-            "files": [
-                "https://github.com/xela-io/ComfyUI-HairDetailer"
-            ],
-            "install_type": "git-clone",
-            "reference": "https://github.com/xela-io/ComfyUI-HairDetailer",
-            "title": "ComfyUI-HairDetailer"
-        },
-        {
             "author": "Nakamura2828",
             "description": "Text and data manipulation nodes for ComfyUI, with emphasis on JSON processing, detection workflows, and bbox visualization.",
             "files": [
@@ -43915,6 +43895,56 @@
             "install_type": "git-clone",
             "reference": "https://github.com/emniko/ComfyUI-CLIPScore",
             "title": "ComfyUI-CLIPScore"
+        },
+        {
+            "author": "tea-time-labs",
+            "description": "Advanced ComfyUI node pack: seam-locked pose tiled upscaling and cap-based temporal stitch inpainting for WAN VACE.",
+            "files": [
+                "https://github.com/tea-time-labs/sweet-tea-nodes"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/tea-time-labs/sweet-tea-nodes",
+            "title": "sweet-tea-nodes"
+        },
+        {
+            "author": "Alatza",
+            "description": "ComfyUI custom node for building varied prompts across batch generations using sections and per-section pick modes.",
+            "files": [
+                "https://github.com/Alatza/ComfyUI-DynamicPromptComposer"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/Alatza/ComfyUI-DynamicPromptComposer",
+            "title": "ComfyUI-DynamicPromptComposer"
+        },
+        {
+            "author": "Nekodificador",
+            "description": "Interactive sigma schedule editor for ComfyUI \u2014 NURBS spline curve widget",
+            "files": [
+                "https://github.com/Nekodificador/ComfyUI-NKD-Sigmas-Curve"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/Nekodificador/ComfyUI-NKD-Sigmas-Curve",
+            "title": "ComfyUI-NKD-Sigmas-Curve"
+        },
+        {
+            "author": "BacoHubo",
+            "description": "Tile Splitter and Stitcher nodes for SeedVR2 upscaling in ComfyUI",
+            "files": [
+                "https://github.com/BacoHubo/ComfyUI_SeedVR2_Tiler"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/BacoHubo/ComfyUI_SeedVR2_Tiler",
+            "title": "ComfyUI_SeedVR2_Tiler"
+        },
+        {
+            "author": "serious-factory",
+            "description": "Frame-based prompt scheduling for InfiniteTalk/MultiTalk in ComfyUI",
+            "files": [
+                "https://github.com/serious-factory/ComfyUI-MultiTalkPromptSchedule"
+            ],
+            "install_type": "git-clone",
+            "reference": "https://github.com/serious-factory/ComfyUI-MultiTalkPromptSchedule",
+            "title": "ComfyUI-MultiTalkPromptSchedule"
         },
         {
             "author": "Ser-Hilary",

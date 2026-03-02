@@ -77,6 +77,8 @@ pycocotools
 pytorch-lightning
 # prompt-all-in-one-mw audio_to_prompt
 qwen-omni-utils
+# WAS Node Suite Make Seamless
+git+https://github.com/WASasquatch/img2texture.git
 # audiotools
 git+https://github.com/SesameAILabs/silentcipher.git
 # comfyui-impact-pack (Segment Anything / SAM)

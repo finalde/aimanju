@@ -3,6 +3,36 @@
 Base path for all targets:  
 `/home/dalu/workspace/aimanju/external/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts`
 
+---
+
+## OpenPose annotator (body, hand, face)
+
+When you see `model_path is .../body_pose_model.pth` (and similar) in the terminal, these are the files to download manually:
+
+| Name | Download URL | Save path |
+|------|---------------|-----------|
+| body_pose_model.pth | https://huggingface.co/lllyasviel/Annotators/resolve/main/body_pose_model.pth | `ckpts/lllyasviel/Annotators/body_pose_model.pth` |
+| hand_pose_model.pth | https://huggingface.co/lllyasviel/Annotators/resolve/main/hand_pose_model.pth | `ckpts/lllyasviel/Annotators/hand_pose_model.pth` |
+| facenet.pth | https://huggingface.co/lllyasviel/Annotators/resolve/main/facenet.pth | `ckpts/lllyasviel/Annotators/facenet.pth` |
+
+Full directory: `.../comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/` (create it if missing).
+
+---
+
+## ZoeDepth (Intel/zoedepth-nyu-kitti) – Hugging Face cache
+
+When you see a request for `Intel/zoedepth-nyu-kitti` (e.g. `config.json`) and "Network is unreachable", the **ZoeDepth** depth estimator is being loaded via the **transformers** library. It uses the **Hugging Face cache**, not the `ckpts` folder.
+
+- **Repo:** https://huggingface.co/Intel/zoedepth-nyu-kitti  
+- **Cache path:** `~/.cache/huggingface/hub/models--Intel--zoedepth-nyu-kitti/`  
+- The code was updated to use `local_files_only=True`, so it will **only** read from this cache (no network). If the cache is empty, the node will fail until you either:
+  1. Download the repo files (e.g. `config.json`, `preprocessor_config.json`, `*.safetensors` or `pytorch_model.bin`) and place them in the cache under `snapshots/<revision>/`, with `refs/main` pointing to that revision, or  
+  2. Run once with network access so the transformers library can populate the cache.
+
+---
+
+## All annotator models (full table)
+
 | Name | Download URL | Target save path |
 |------|--------------|------------------|
 | **hed** | https://huggingface.co/lllyasviel/Annotators/resolve/main/ControlNetHED.pth | `.../ckpts/lllyasviel/Annotators/ControlNetHED.pth` |
