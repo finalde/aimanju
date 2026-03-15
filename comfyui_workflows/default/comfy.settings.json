@@ -212,5 +212,6 @@
     },
     "Comfy.Queue.History.Expanded": false,
     "Comfy.RightSidePanel.IsOpen": false,
-    "Comfy.NodeBadge.ShowApiPricing": true
+    "Comfy.NodeBadge.ShowApiPricing": true,
+    "Comfy.Workflow.ShowMissingNodesWarning": true
 }
